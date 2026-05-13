@@ -7,7 +7,7 @@
         public double Preco { get; set; }
 
         // Método que retorna uma lista de produtos
-        public static List<Produto> ListarProdutos()
+        public static List<Produto> ListaDeProdutos()
         {
             return new List<Produto>
             {
