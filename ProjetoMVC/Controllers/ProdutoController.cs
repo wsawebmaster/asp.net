@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProjetoMVC.Models;
 
 namespace ProjetoMVC.Controllers
 {
@@ -7,8 +8,7 @@ namespace ProjetoMVC.Controllers
     {
         public IActionResult Index()
         {
-            // Obtém a lista de produtos do Model e passa para a View
-
+            // Obtém a lista de produtos do Model e passa para a Vie
             List<Produto> produtos = Produto.ListaDeProdutos();
 
             // Enviando a lista de produtos para a View

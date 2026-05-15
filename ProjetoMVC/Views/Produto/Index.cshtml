@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ProjetoMVC.Models.Produto>
+@{
+    ViewData["Title"] = "Lista de Produtos";
+}
+
+
+<h2>Produtos Disponíveis</h2>
+<table>
+<thead>
+<tr>
+    <th>ID</th>
+    <th>NOME</th>
+    <th>PREÇO</th>
+</tr>
+</thead>
+<tbody>
+@foreach (var produto in Model)
+{
+    <tr>
+        <td>@produto.Id</td>
+        <td>@produto.Nome</td>
+        <td>@produto.Preco</td>
+    </tr>
+}
+</tbody>
+<table/>
