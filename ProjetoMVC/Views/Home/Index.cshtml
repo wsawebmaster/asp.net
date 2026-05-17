@@ -1,8 +1,38 @@
-﻿@{
+﻿@model IEnumerable<ProjetoMVC.Models.Produto>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Bem-vindo!</h1>
+    <p>Conheça nossa lista de produtos disponíveis.</p>
 </div>
+
+<h2>Produtos Disponíveis</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOME</th>
+            <th>PREÇO</th>
+            <th>AÇÕES</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.Id</td>
+                <td>@produto.Nome</td>
+                <td>R$ @produto.Preco.ToString("F2")</td>
+                <td>
+                    <a asp-controller="Produto" asp-action="Edit" asp-route-id="@produto.Id" class="btn btn-sm btn-warning">Editar</a> |
+                    <a asp-controller="Produto" asp-action="Excluir" asp-route-id="@produto.Id" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+<a asp-controller="Produto" asp-action="Create" class="btn btn-primary">Adicionar Produto</a>

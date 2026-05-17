@@ -15,7 +15,8 @@ namespace ProjetoMVC.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<Produto> produtos = Produto.ListaDeProdutos();
+            return View(produtos);
         }
 
         public IActionResult Privacy()
