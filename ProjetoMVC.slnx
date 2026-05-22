@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Projeto04.PrimeiraAPI/Projeto04.PrimeiraAPI.csproj" Id="1ecc2c10-9716-4276-abe5-042d8fd08e29" />
+  <Project Path="Projeto05.EntityFramework/Projeto05.EntityFramework.csproj" Id="15107eb6-a2e9-410f-aa7b-6e82ea2de504" />
   <Project Path="ProjetoMVC/ProjetoMVC.csproj" />
 </Solution>
